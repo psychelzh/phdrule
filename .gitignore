@@ -1,4 +1,8 @@
+# rstudio project files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# custom files
+*.txt

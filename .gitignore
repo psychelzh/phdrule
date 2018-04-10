@@ -4,5 +4,9 @@
 .RData
 .Ruserdata
 
+# generated files
+*.html
+/*/
+
 # custom files
 *.txt

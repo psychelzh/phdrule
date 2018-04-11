@@ -10,7 +10,6 @@ site: "bookdown::bookdown_site"
 output:
   bookdown::gitbook:
     lib_dir: "book_assets"
-    md_extensions: -ascii_identifiers
 ---
 
 # 前言 {-}

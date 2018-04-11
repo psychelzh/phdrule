@@ -1,0 +1,5 @@
+book_filename: "phd"
+language:
+  ui:
+    chapter_name: ['第', '章']
+delete_merged_file: true

@@ -1,5 +1,8 @@
 book_filename: "phd"
 language:
+  label:
+    exm: "例"
+    prp: "原因"
   ui:
     chapter_name: ['第', '章']
 delete_merged_file: true

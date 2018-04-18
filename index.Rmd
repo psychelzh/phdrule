@@ -7,9 +7,7 @@ author:
 - 张亮【编】
 date: "英文版发布于2004年，中文版发布于2009年"
 site: "bookdown::bookdown_site"
-output:
-  bookdown::gitbook:
-    lib_dir: "book_assets"
+knit: "bookdown::render_book"
 ---
 
 # 前言 {-}

@@ -1,0 +1,6 @@
+bookdown::gitbook:
+  lib_dir: "book_assets"
+  split_by: section
+  config:
+    sharing: no
+    search: no

@@ -506,7 +506,7 @@ Table: (\#tab:lit-usage) 学生利用文献的发展过程
 文献管理软件
 
 * Papyrus: http://www.rsd.com/
-* ProCite: http://www.risine.com/
+* ProCite: http://www.risinc.com/
 * EndNote: http://www.niles.com/
 
 许多人不使用这些文献管理软件，他们偏好使用数据库、表格和在Word文档等。很多有效的参考文献可能只是一个较大的文本文件而已。

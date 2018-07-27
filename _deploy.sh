@@ -7,9 +7,7 @@ git clone -b gh-pages \
   https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git \
   book-output
 cd book-output
-git rm -rf *
 cp -r ../phdrule/* ./
-touch .nojekyll
 git add --all *
 git commit -m "Update the book (travis build ${TRAVIS_BUILD_NUMBER})"
 git push -q origin gh-pages

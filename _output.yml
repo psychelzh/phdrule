@@ -1,7 +1,5 @@
 bookdown::gitbook:
   lib_dir: "book_assets"
-  split_by: section
-  md_extensions: -ascii_identifiers
   config:
     sharing: no
     search: no

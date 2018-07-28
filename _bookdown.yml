@@ -1,5 +1,7 @@
 book_filename: "phdrule"
 output_dir: "phdrule"
+delete_merged_file: true
+edit: https://github.com/psychelzh/phdrule/edit/master/%s
 language:
   label:
     exm: "例"
@@ -7,4 +9,4 @@ language:
     tab: "表"
   ui:
     chapter_name: ['第', '章']
-delete_merged_file: true
+    edit: "编辑"

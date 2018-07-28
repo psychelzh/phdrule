@@ -1,6 +1,6 @@
 Package: phdrule
 Type: Book
 Title: The Unwritten Rules of Ph.D. Research
-Version: 0.0.0-9001
+Version: 0.0.0-9002
 Imports:
     bookdown

@@ -1,5 +1,10 @@
 bookdown::gitbook:
   lib_dir: "book_assets"
   config:
-    sharing: no
+    sharing:
+      facebook: no
+      twitter: no
+      github: yes
+      weibo: yes
+      all: ["github", "weibo", "google", "linkedin"]
     search: no

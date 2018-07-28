@@ -6,6 +6,7 @@ author:
 - 彭万华【译】 彭凯平【校】
 - 张亮【编】
 date: "英文版发布于2004年，中文版发布于2009年"
+github-repo: psychelzh/phdrule
 site: "bookdown::bookdown_site"
 knit: "bookdown::render_book"
 ---

@@ -10,7 +10,7 @@ cd book-output
 git rm -rf *
 # keep .nojekyll
 git checkout HEAD .nojekyll
-cp -r ../phdrule/* ./
+cp -r ../_book/* ./
 git add --all *
 git commit -m "Update the book (travis build ${TRAVIS_BUILD_NUMBER})"
 git push -q origin gh-pages

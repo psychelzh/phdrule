@@ -46,4 +46,4 @@ rsconnect/
 # End of https://www.gitignore.io/api/r
 
 # target folder
-phdrule
+_book/

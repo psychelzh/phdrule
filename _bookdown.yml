@@ -1,5 +1,3 @@
-book_filename: "phdrule"
-output_dir: "phdrule"
 delete_merged_file: true
 edit: https://github.com/psychelzh/phdrule/edit/master/%s
 language:

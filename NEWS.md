@@ -1,3 +1,7 @@
+# phdrule 0.0.2
+
+* Correct badges in README.md
+
 # phdrule 0.0.1
 
 * Fix OCR issues.

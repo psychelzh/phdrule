@@ -1,10 +1,46 @@
-delete_merged_file: true
-edit: https://github.com/psychelzh/phdrule/edit/master/%s
-language:
-  label:
-    exm: "例"
-    prp: "原因"
-    tab: "表"
-  ui:
-    chapter_name: ['第', '章']
-    edit: "编辑"
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: 给研究生的学术建议
+  subtitle: The Unwritten Rules of Ph.D. Research
+  author:
+  - （英）戈登·鲁格 玛丽安·彼得【著】
+  - 彭万华【译】 彭凯平【校】
+  - 张亮【编】
+  date: 英文版发布于2004年，中文版发布于2009年
+  site-url: https://psychelzh.github.io/phdrule/
+  repo-url: https://github.com/psychelzh/phdrule
+  repo-branch: master
+  repo-actions: issue
+  chapters:
+    - index.qmd
+    - 01.qmd
+    - 02.qmd
+    - 03.qmd
+    - 04.qmd
+    - 05.qmd
+    - 06.qmd
+    - 07.qmd
+    - 08.qmd
+    - 09.qmd
+    - 10.qmd
+    - 11.qmd
+    - 12.qmd
+    - 13.qmd
+    - 14.qmd
+    - 15.qmd
+    - 16.qmd
+  appendices:
+    - rules.qmd
+    - glossary.qmd
+
+lang: zh
+
+format:
+  html:
+    crossref:
+      prp-title: 原因
+    theme: cosmo
+    code-link: true

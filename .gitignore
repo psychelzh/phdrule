@@ -47,3 +47,6 @@ rsconnect/
 
 # target folder
 _book/
+
+/.quarto/
+/docs/

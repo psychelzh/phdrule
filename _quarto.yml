@@ -44,3 +44,5 @@ format:
       prp-title: 原因
     theme: cosmo
     code-link: true
+    comments:
+      hypothesis: true

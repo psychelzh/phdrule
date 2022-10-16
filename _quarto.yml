@@ -36,6 +36,8 @@ book:
     - rules.qmd
     - glossary.qmd
 
+# https://github.com/quarto-dev/quarto-cli/issues/2285
+# https://github.com/quarto-dev/quarto-cli/issues/251
 lang: zh
 
 format:

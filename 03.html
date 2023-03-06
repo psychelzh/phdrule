@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -244,6 +244,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -256,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 <p>学者的头衔、等级和角色的传统可以追溯到拜占庭帝国（Byrnn-tine Empire）甚至更早。以下的内容可以被当做一系列概括性的原则，而不是绝对真理。让我们先从最低的职位开始（也就是一个在研究团体看来仅仅比管理员和接受课程教育的学生略高一点的职位），然后再逐渐上升到最高职位。需要记住的很直要的一点是，尽管这些头衔为全世界所知所用，但同样的头衔在不同的大学经常有十分不同的用法。</p>
 <section id="研究助理-research-assistant" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="研究助理-research-assistant"><span class="header-section-number">3.1.1</span> 研究助理 （Research assistant）</h3>
-<p>研究助理是被聘请来协助学术研究人员开展研究工作的人员。这个研究工作通常是为了某个研究课题而开展的，而这个研究课题之所以能够进行，是因为之前这个研究人员争取到该课题的科研经费。这意味着该研究课题有可能是提前就计划好了的，而且很可能是相当详细的计划。拿到研究经费的人很可能持有这样的观点：这项工程带来的任何荣耀（包括论文的最初原创作者）都应该归功于那个计划好这个项目并争取到研究经费，从而让这个项目得以实施的人（也就是他们自己八而研究助理则可能持不同的观点，争取研究经费的项目申请书中包含着大量似是而非的主张，这些东西如果没有进一步细节的工作，是无法转化为有意义的研究的。这些细节的工作都是由研究助理来完成的。因此在这项工程带来的任何荣耀（包括论文的最初原创作者）中都该有他们应得的一份。在这样的情况中，如果是刚刚修完一个学位的研究助理，在这场争辩中是不可能有发言资格的。博士后研究助理的情况可能会有些不同，但通常也不是完全不同的。</p>
+<p>研究助理是被聘请来协助学术研究人员开展研究工作的人员。这个研究工作通常是为了某个研究课题而开展的，而这个研究课题之所以能够进行，是因为之前这个研究人员争取到该课题的科研经费。这意味着该研究课题有可能是提前就计划好了的，而且很可能是相当详细的计划。拿到研究经费的人很可能持有这样的观点：这项工程带来的任何荣耀（包括论文的最初原创作者）都应该归功于那个计划好这个项目并争取到研究经费，从而让这个项目得以实施的人（也就是他们自己）。而研究助理则可能持不同的观点，争取研究经费的项目申请书中包含着大量似是而非的主张，这些东西如果没有进一步细节的工作，是无法转化为有意义的研究的。这些细节的工作都是由研究助理来完成的。因此在这项工程带来的任何荣耀（包括论文的最初原创作者）中都该有他们应得的一份。在这样的情况中，如果是刚刚修完一个学位的研究助理，在这场争辩中是不可能有发言资格的。博士后研究助理的情况可能会有些不同，但通常也不是完全不同的。</p>
 </section>
 <section id="博士后研究助理postdoctoral-research-assistant" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="博士后研究助理postdoctoral-research-assistant"><span class="header-section-number">3.1.2</span> 博士后研究助理（Postdoctoral research assistant）</h3>
@@ -440,7 +441,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "已复制");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "已复制");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -476,24 +494,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

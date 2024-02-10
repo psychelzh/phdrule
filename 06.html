@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "没有结果",
     "search-matching-documents-text": "匹配的文档",
@@ -56,11 +62,18 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "更多匹配结果",
     "search-more-matches-text": "更多匹配结果",
     "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "取消",
-    "search-submit-button-title": "提交"
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
   }
 }</script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
@@ -69,11 +82,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">阅读</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">阅读</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -81,123 +99,143 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">给研究生的学术建议</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/psychelzh/phdrule" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/psychelzh/phdrule" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="搜索"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">前言</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">前言</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">你想攻读博士学位吗？</span></a>
+  <a href="./01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">你想攻读博士学位吗？</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">攻读博士学位的程序</span></a>
+  <a href="./02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">攻读博士学位的程序</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">学术体制</span></a>
+  <a href="./03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">学术体制</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">导师</span></a>
+  <a href="./04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">导师</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">人际关系网络</span></a>
+  <a href="./05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">人际关系网络</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">阅读</span></a>
+  <a href="./06.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">阅读</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">论文类型</span></a>
+  <a href="./07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">论文类型</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">写作</span></a>
+  <a href="./08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">写作</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./09.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">写作结构</span></a>
+  <a href="./09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">写作结构</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">写作风格</span></a>
+  <a href="./10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">写作风格</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">写作过程</span></a>
+  <a href="./11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">写作过程</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">陈述报告</span></a>
+  <a href="./12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">陈述报告</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./13.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">研究设计</span></a>
+  <a href="./13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">研究设计</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./14.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">答辩</span></a>
+  <a href="./14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">答辩</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">学术会议</span></a>
+  <a href="./15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">学术会议</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./16.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">答辩后</span></a>
+  <a href="./16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">答辩后</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">附录</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">附录</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rules.html" class="sidebar-item-text sidebar-link">有用的原则和建议</a>
+  <a href="./rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">有用的原则和建议</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./glossary.html" class="sidebar-item-text sidebar-link">一些有用的术语</a>
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">一些有用的术语</span></a>
   </div>
 </li>
       </ul>
@@ -205,53 +243,54 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#找到正确的参考文献" id="toc-找到正确的参考文献" class="nav-link active" data-scroll-target="#找到正确的参考文献"><span class="toc-section-number">6.1</span>  找到正确的参考文献</a></li>
-  <li><a href="#研究者的核心文献库" id="toc-研究者的核心文献库" class="nav-link" data-scroll-target="#研究者的核心文献库"><span class="toc-section-number">6.2</span>  研究者的核心文献库</a></li>
-  <li><a href="#文献综述" id="toc-文献综述" class="nav-link" data-scroll-target="#文献综述"><span class="toc-section-number">6.3</span>  文献综述</a></li>
-  <li><a href="#在线搜索" id="toc-在线搜索" class="nav-link" data-scroll-target="#在线搜索"><span class="toc-section-number">6.4</span>  在线搜索</a>
+  <li><a href="#找到正确的参考文献" id="toc-找到正确的参考文献" class="nav-link active" data-scroll-target="#找到正确的参考文献"><span class="header-section-number">6.1</span> 找到正确的参考文献</a></li>
+  <li><a href="#研究者的核心文献库" id="toc-研究者的核心文献库" class="nav-link" data-scroll-target="#研究者的核心文献库"><span class="header-section-number">6.2</span> 研究者的核心文献库</a></li>
+  <li><a href="#文献综述" id="toc-文献综述" class="nav-link" data-scroll-target="#文献综述"><span class="header-section-number">6.3</span> 文献综述</a></li>
+  <li><a href="#在线搜索" id="toc-在线搜索" class="nav-link" data-scroll-target="#在线搜索"><span class="header-section-number">6.4</span> 在线搜索</a>
   <ul class="collapse">
-  <li><a href="#传达正确的信息" id="toc-传达正确的信息" class="nav-link" data-scroll-target="#传达正确的信息"><span class="toc-section-number">6.4.1</span>  传达正确的信息</a></li>
-  <li><a href="#在线检索概述" id="toc-在线检索概述" class="nav-link" data-scroll-target="#在线检索概述"><span class="toc-section-number">6.4.2</span>  在线检索概述</a></li>
-  <li><a href="#来源" id="toc-来源" class="nav-link" data-scroll-target="#来源"><span class="toc-section-number">6.4.3</span>  来源</a></li>
-  <li><a href="#策略" id="toc-策略" class="nav-link" data-scroll-target="#策略"><span class="toc-section-number">6.4.4</span>  策略</a></li>
-  <li><a href="#技巧和命令" id="toc-技巧和命令" class="nav-link" data-scroll-target="#技巧和命令"><span class="toc-section-number">6.4.5</span>  技巧和命令</a></li>
+  <li><a href="#传达正确的信息" id="toc-传达正确的信息" class="nav-link" data-scroll-target="#传达正确的信息"><span class="header-section-number">6.4.1</span> 传达正确的信息</a></li>
+  <li><a href="#在线检索概述" id="toc-在线检索概述" class="nav-link" data-scroll-target="#在线检索概述"><span class="header-section-number">6.4.2</span> 在线检索概述</a></li>
+  <li><a href="#来源" id="toc-来源" class="nav-link" data-scroll-target="#来源"><span class="header-section-number">6.4.3</span> 来源</a></li>
+  <li><a href="#策略" id="toc-策略" class="nav-link" data-scroll-target="#策略"><span class="header-section-number">6.4.4</span> 策略</a></li>
+  <li><a href="#技巧和命令" id="toc-技巧和命令" class="nav-link" data-scroll-target="#技巧和命令"><span class="header-section-number">6.4.5</span> 技巧和命令</a></li>
   </ul></li>
-  <li><a href="#其他信息来源" id="toc-其他信息来源" class="nav-link" data-scroll-target="#其他信息来源"><span class="toc-section-number">6.5</span>  其他信息来源</a></li>
-  <li><a href="#有经验的评审人如何读论文" id="toc-有经验的评审人如何读论文" class="nav-link" data-scroll-target="#有经验的评审人如何读论文"><span class="toc-section-number">6.6</span>  有经验的评审人如何读论文</a>
+  <li><a href="#其他信息来源" id="toc-其他信息来源" class="nav-link" data-scroll-target="#其他信息来源"><span class="header-section-number">6.5</span> 其他信息来源</a></li>
+  <li><a href="#有经验的评审人如何读论文" id="toc-有经验的评审人如何读论文" class="nav-link" data-scroll-target="#有经验的评审人如何读论文"><span class="header-section-number">6.6</span> 有经验的评审人如何读论文</a>
   <ul class="collapse">
-  <li><a href="#参考文献" id="toc-参考文献" class="nav-link" data-scroll-target="#参考文献"><span class="toc-section-number">6.6.1</span>  参考文献</a></li>
-  <li><a href="#附件对于博士论文而言一般论文不要求" id="toc-附件对于博士论文而言一般论文不要求" class="nav-link" data-scroll-target="#附件对于博士论文而言一般论文不要求"><span class="toc-section-number">6.6.2</span>  附件（对于博士论文而言，一般论文不要求）</a></li>
-  <li><a href="#标题页与致谢" id="toc-标题页与致谢" class="nav-link" data-scroll-target="#标题页与致谢"><span class="toc-section-number">6.6.3</span>  标题页与致谢</a></li>
-  <li><a href="#摘要" id="toc-摘要" class="nav-link" data-scroll-target="#摘要"><span class="toc-section-number">6.6.4</span>  摘要</a></li>
-  <li><a href="#目录页对博士论文而言一般论文不要求" id="toc-目录页对博士论文而言一般论文不要求" class="nav-link" data-scroll-target="#目录页对博士论文而言一般论文不要求"><span class="toc-section-number">6.6.5</span>  目录页（对博士论文而言，一般论文不要求）</a></li>
-  <li><a href="#首页" id="toc-首页" class="nav-link" data-scroll-target="#首页"><span class="toc-section-number">6.6.6</span>  首页</a></li>
-  <li><a href="#方法部分" id="toc-方法部分" class="nav-link" data-scroll-target="#方法部分"><span class="toc-section-number">6.6.7</span>  方法部分</a></li>
-  <li><a href="#结果部分" id="toc-结果部分" class="nav-link" data-scroll-target="#结果部分"><span class="toc-section-number">6.6.8</span>  结果部分</a></li>
-  <li><a href="#讨论部分" id="toc-讨论部分" class="nav-link" data-scroll-target="#讨论部分"><span class="toc-section-number">6.6.9</span>  讨论部分</a></li>
-  <li><a href="#结论" id="toc-结论" class="nav-link" data-scroll-target="#结论"><span class="toc-section-number">6.6.10</span>  结论</a></li>
-  <li><a href="#批判性反思部分" id="toc-批判性反思部分" class="nav-link" data-scroll-target="#批判性反思部分"><span class="toc-section-number">6.6.11</span>  批判性反思部分</a></li>
-  <li><a href="#大量阅读" id="toc-大量阅读" class="nav-link" data-scroll-target="#大量阅读"><span class="toc-section-number">6.6.12</span>  大量阅读</a></li>
-  <li><a href="#终身读书的人有哪些读书习惯" id="toc-终身读书的人有哪些读书习惯" class="nav-link" data-scroll-target="#终身读书的人有哪些读书习惯"><span class="toc-section-number">6.6.13</span>  终身读书的人有哪些读书习惯</a></li>
-  <li><a href="#使用文献中的材料" id="toc-使用文献中的材料" class="nav-link" data-scroll-target="#使用文献中的材料"><span class="toc-section-number">6.6.14</span>  使用文献中的材料</a></li>
-  <li><a href="#参考书目不全" id="toc-参考书目不全" class="nav-link" data-scroll-target="#参考书目不全"><span class="toc-section-number">6.6.15</span>  参考书目不全</a></li>
-  <li><a href="#文献回顾literature-survey和文献综述这literature-review有何区别" id="toc-文献回顾literature-survey和文献综述这literature-review有何区别" class="nav-link" data-scroll-target="#文献回顾literature-survey和文献综述这literature-review有何区别"><span class="toc-section-number">6.6.16</span>  文献回顾（literature survey）和文献综述这（literature review）有何区别？</a></li>
-  <li><a href="#做一份带说明的文献目录annotated-bibliography" id="toc-做一份带说明的文献目录annotated-bibliography" class="nav-link" data-scroll-target="#做一份带说明的文献目录annotated-bibliography"><span class="toc-section-number">6.6.17</span>  做一份带说明的文献目录（annotated bibliography）</a></li>
+  <li><a href="#参考文献" id="toc-参考文献" class="nav-link" data-scroll-target="#参考文献"><span class="header-section-number">6.6.1</span> 参考文献</a></li>
+  <li><a href="#附件对于博士论文而言一般论文不要求" id="toc-附件对于博士论文而言一般论文不要求" class="nav-link" data-scroll-target="#附件对于博士论文而言一般论文不要求"><span class="header-section-number">6.6.2</span> 附件（对于博士论文而言，一般论文不要求）</a></li>
+  <li><a href="#标题页与致谢" id="toc-标题页与致谢" class="nav-link" data-scroll-target="#标题页与致谢"><span class="header-section-number">6.6.3</span> 标题页与致谢</a></li>
+  <li><a href="#摘要" id="toc-摘要" class="nav-link" data-scroll-target="#摘要"><span class="header-section-number">6.6.4</span> 摘要</a></li>
+  <li><a href="#目录页对博士论文而言一般论文不要求" id="toc-目录页对博士论文而言一般论文不要求" class="nav-link" data-scroll-target="#目录页对博士论文而言一般论文不要求"><span class="header-section-number">6.6.5</span> 目录页（对博士论文而言，一般论文不要求）</a></li>
+  <li><a href="#首页" id="toc-首页" class="nav-link" data-scroll-target="#首页"><span class="header-section-number">6.6.6</span> 首页</a></li>
+  <li><a href="#方法部分" id="toc-方法部分" class="nav-link" data-scroll-target="#方法部分"><span class="header-section-number">6.6.7</span> 方法部分</a></li>
+  <li><a href="#结果部分" id="toc-结果部分" class="nav-link" data-scroll-target="#结果部分"><span class="header-section-number">6.6.8</span> 结果部分</a></li>
+  <li><a href="#讨论部分" id="toc-讨论部分" class="nav-link" data-scroll-target="#讨论部分"><span class="header-section-number">6.6.9</span> 讨论部分</a></li>
+  <li><a href="#结论" id="toc-结论" class="nav-link" data-scroll-target="#结论"><span class="header-section-number">6.6.10</span> 结论</a></li>
+  <li><a href="#批判性反思部分" id="toc-批判性反思部分" class="nav-link" data-scroll-target="#批判性反思部分"><span class="header-section-number">6.6.11</span> 批判性反思部分</a></li>
+  <li><a href="#大量阅读" id="toc-大量阅读" class="nav-link" data-scroll-target="#大量阅读"><span class="header-section-number">6.6.12</span> 大量阅读</a></li>
+  <li><a href="#终身读书的人有哪些读书习惯" id="toc-终身读书的人有哪些读书习惯" class="nav-link" data-scroll-target="#终身读书的人有哪些读书习惯"><span class="header-section-number">6.6.13</span> 终身读书的人有哪些读书习惯</a></li>
+  <li><a href="#使用文献中的材料" id="toc-使用文献中的材料" class="nav-link" data-scroll-target="#使用文献中的材料"><span class="header-section-number">6.6.14</span> 使用文献中的材料</a></li>
+  <li><a href="#参考书目不全" id="toc-参考书目不全" class="nav-link" data-scroll-target="#参考书目不全"><span class="header-section-number">6.6.15</span> 参考书目不全</a></li>
+  <li><a href="#文献回顾literature-survey和文献综述这literature-review有何区别" id="toc-文献回顾literature-survey和文献综述这literature-review有何区别" class="nav-link" data-scroll-target="#文献回顾literature-survey和文献综述这literature-review有何区别"><span class="header-section-number">6.6.16</span> 文献回顾（literature survey）和文献综述这（literature review）有何区别？</a></li>
+  <li><a href="#做一份带说明的文献目录annotated-bibliography" id="toc-做一份带说明的文献目录annotated-bibliography" class="nav-link" data-scroll-target="#做一份带说明的文献目录annotated-bibliography"><span class="header-section-number">6.6.17</span> 做一份带说明的文献目录（annotated bibliography）</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/psychelzh/phdrule/issues/new" class="toc-action">报告问题</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/psychelzh/phdrule/issues/new" class="toc-action"><i class="bi bi-github"></i>报告问题</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-reading" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">阅读</span></span></h1>
+<h1 class="title"><span id="sec-reading" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">阅读</span></span></h1>
 </div>
 
 
@@ -264,7 +303,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>读博士期间你必须进行大量的阅读。阅读材料必须选对，同时你要正确地利用这些材料。本章讨论的就是这方面的内容。</p>
 <p>这一章与讲写作的第八章有不少重叠。原因有很多，其中之一是，你通过阅读才能获取写作需要的信息（比如写论文）。另一个原因是，如果你了解了有经验的学者是如何构思和组织他们的文章的，你就能更有效地进行阅读。</p>
@@ -493,13 +534,13 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="6.6.6" class="anchored" data-anchor-id="首页"><span class="header-section-number">6.6.6</span> 首页</h3>
 <p>首页通常是引言的一部分（虽然情况并不都是如此，有的学者写作风格奇特，不同领域间也有差异）。这一页很重要，因为大多数的考官或其他审阅人都会在看这一页时就形成对你整篇论文的第一印象——论文是很出色、一般、勉强合格，还是很糟糕。第一印象一旦形成就很难改变。以下给出了两个例子，它们都摘自己发表文章的首页。</p>
 <div id="exm-prf-page" class="theorem example">
-<p><span class="theorem-title"><strong>例子 6.1 </strong></span>阶梯技术是由欣科（1965）最先发明的。与凯利方格技术（例如肖，1981）一样，阶梯技木同样起源于临床心理学和人格理论，尤其是凯利（1955）的个人建构论是（PCT）。然而，在认知心理学（例如格里瑟，1978；格里瑟，罗伯森，拉弗莱斯和斯万哈特，1980）以及职业心理学领域也独立出现了以层次任务分析（例如安奈特和邓肯， 1967；霍吉肯森和克劳肖，1985）为形式的类似方法。需要指出的是，虽然用后者得出的结果与阶梯技术相似，但后者荻取信息的方法大体是由无组织的采访构成的（参考霍吉肯森，op.cit）。</p>
+<p><span class="theorem-title"><strong>例子 6.1</strong></span> 阶梯技术是由欣科（1965）最先发明的。与凯利方格技术（例如肖，1981）一样，阶梯技木同样起源于临床心理学和人格理论，尤其是凯利（1955）的个人建构论是（PCT）。然而，在认知心理学（例如格里瑟，1978；格里瑟，罗伯森，拉弗莱斯和斯万哈特，1980）以及职业心理学领域也独立出现了以层次任务分析（例如安奈特和邓肯， 1967；霍吉肯森和克劳肖，1985）为形式的类似方法。需要指出的是，虽然用后者得出的结果与阶梯技术相似，但后者荻取信息的方法大体是由无组织的采访构成的（参考霍吉肯森，op.cit）。</p>
 </div>
 <div id="exm-amt-page" class="theorem example">
-<p><span class="theorem-title"><strong>例子 6.2 </strong></span>分类技术的基本概念是请调查对象将事物分成不同的组。用来分组的事物可以是具体物体，比如不同种类的老鼠，也可以是图像，比如各种样式的屏幕图像，还可以是描述物件或情景的卡片，比如写了很多编辑名宇的卡片。组别可以由调查人确定，也可以由调查对象确定，或者由双方讨论决定。分类技术在获取调查对象的不同类型，以及考察调查对象类型判断的分歧方面很有用。</p>
+<p><span class="theorem-title"><strong>例子 6.2</strong></span> 分类技术的基本概念是请调查对象将事物分成不同的组。用来分组的事物可以是具体物体，比如不同种类的老鼠，也可以是图像，比如各种样式的屏幕图像，还可以是描述物件或情景的卡片，比如写了很多编辑名宇的卡片。组别可以由调查人确定，也可以由调查对象确定，或者由双方讨论决定。分类技术在获取调查对象的不同类型，以及考察调查对象类型判断的分歧方面很有用。</p>
 </div>
-<p><a href="#exm-prf-page">例子&nbsp;<span>6.1</span></a> 里节选的论文文笔简练，包含了所有关键材料，还涉及了讨论类似技术的另外两类文献。这说明论文的作者做了充分的准备工作。文章还对不同的技术作了比较，体现了作者不仅仔细阅读了其他文献，并且真正读懂了这些文献。语言很正式，作者还用了学术写作的缩写形式，比如“op.cit”。这显然不是一篇业余人士用网上找来的资料拼凑出来的文章。</p>
-<p><a href="#exm-amt-page">例子&nbsp;<span>6.2</span></a> 节选的论文明显没有前一段正式。我们看不到任何相关文献的信息，论文的陈述因而显得毫无根据。作者显然在分类技术方面有一定实际经验，但我们无法通过论文判断，作者是一名学者还是相关领域的工作人员，是一位专家还是一个新手。</p>
+<p><a href="#exm-prf-page" class="quarto-xref">例子&nbsp;<span>6.1</span></a> 里节选的论文文笔简练，包含了所有关键材料，还涉及了讨论类似技术的另外两类文献。这说明论文的作者做了充分的准备工作。文章还对不同的技术作了比较，体现了作者不仅仔细阅读了其他文献，并且真正读懂了这些文献。语言很正式，作者还用了学术写作的缩写形式，比如“op.cit”。这显然不是一篇业余人士用网上找来的资料拼凑出来的文章。</p>
+<p><a href="#exm-amt-page" class="quarto-xref">例子&nbsp;<span>6.2</span></a> 节选的论文明显没有前一段正式。我们看不到任何相关文献的信息，论文的陈述因而显得毫无根据。作者显然在分类技术方面有一定实际经验，但我们无法通过论文判断，作者是一名学者还是相关领域的工作人员，是一位专家还是一个新手。</p>
 <p>第一段论文容易使人产生艰深难懂、不顾及读者接受能力的印象，然而对于学术圈的读者，它却传达了一个明确积极的信息——这是一篇踏实、有含金量、专业性强的论文，作者对自己讨论的课题了如指掌。虽然读起来费劲，却不是那种意思模糊不清，充满了玄妙空洞的术语的文章。一名期刊审阅人或一位校外评审人在看到这段文章时会想：“看来我不会判这篇论文不合格，如果整篇论文都像这一段那么棒的话。”</p>
 <p>这两段论文的有趣之处在于，它们出自同一个作者之手，讨论的课题也紧密相关，唯一的一个明显区别是两者的写作目的。第一段文章节选自一篇通过正常渠道投给期刊的学术论文。它必须显示出足够的学术分量才能说服审阅人，使他们相信这是一篇值得发表的论文。第二段节选自一篇写在百科全书上的文章。百科全书的读者群是非专业人士，这就意味若文章的特色和要求必须有别于期刊论文一比如不需要使用高度精简概括的句子。</p>
 <dl>
@@ -569,11 +610,11 @@ ul.task-list li input[type="checkbox"] {
 <p>有的学者喜欢在论文中包含批判性反思这个部分。在这个部分里，作者思考自己在研究过程中取得了哪些收获，吸取了哪些教训。别的学者认为这样的做法说得轻一点是做作的自我迷恋，说得重一点是不必要地暴露自己的弱点，而且还触犯了第三条黄金法则（不要惊慌失措而在压力下吐露真相）。赞同和反对的双方都有自己的道理。</p>
 <p>有时候，科学硕士论文必须包括批判性反思部分。如果你是一名正在攻读科学硕士学位的学生，而你将来要写的学位论文又必须包括批判性反思部分，那么你就没有选择权可以完全忽略这个部分。然而即便在这种情况下，你也不用过于担心。以下的两个例子或许可以帮到你。</p>
 <div id="exm-neg" class="theorem example">
-<p><span class="theorem-title"><strong>例子 6.3 (反面教材) </strong></span>我现在意识到我的调查问卷设计得很糟糕，如果可以重来的话，我会在设计问卷上多花一些精力。</p>
+<p><span class="theorem-title"><strong>例子 6.3 (反面教材)</strong></span> 我现在意识到我的调查问卷设计得很糟糕，如果可以重来的话，我会在设计问卷上多花一些精力。</p>
 </div>
 <p>（潜台词：我是一个彻彻底底的业余人士，懂得很少也不自信；我一无是处。）</p>
 <div id="exm-pos" class="theorem example">
-<p><span class="theorem-title"><strong>例子 6.4 (正面教材) </strong></span>如果将这里谈到的粗集理论（rough set theory）分析与劳施（Rosch）提出的边界模糊的典型集员概念（prototypical set membership with fuzzy boundaries）相比较，可能会产生有意思的结果。</p>
+<p><span class="theorem-title"><strong>例子 6.4 (正面教材)</strong></span> 如果将这里谈到的粗集理论（rough set theory）分析与劳施（Rosch）提出的边界模糊的典型集员概念（prototypical set membership with fuzzy boundaries）相比较，可能会产生有意思的结果。</p>
 </div>
 <p>（潜台词：我放弃使用古老枯燥的内容分析法，而选择使用了最高端的、很少为人所知的数学方法分析我的调查对象的类别。同时，我对另一门学科的另一种完全不同的、同样极少为人所知的分析方法也很熟悉。我不是一个轻易暴露自己弱点的人，我也不打算在这篇论文里暴露自己的任何弱点。）</p>
 <p>在上面给出的那个正面教材中，我们可以看出，自信的信号过于强烈也会带来潜在的危险。所以在使用这类方法时也要谨慎。</p>
@@ -685,9 +726,13 @@ ul.task-list li input[type="checkbox"] {
 <p>博士生阶段学习的一个部分是形成自己的核心储备。编制一份带说明的文献目录为获取核心储备提供了一个有效机制。同时，通过记录核心储备以外的主要文献的信息，它又是核心储备的有效补充。带说明的文献书目是有用的研究工具。这个工具是你个人使用的，所以你可以按照你自己的思维和习惯去设计它。</p>
 </dd>
 </dl>
-<div id="tbl-lit-usage" class="anchored">
+<div id="tbl-lit-usage" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lit-usage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+表格&nbsp;6.1: 学生利用文献的发展过程
+</figcaption>
+<div aria-describedby="tbl-lit-usage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>表格&nbsp;6.1: 学生利用文献的发展过程</caption>
 <colgroup>
 <col style="width: 24%">
 <col style="width: 17%">
@@ -729,6 +774,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
 </div>
 <dl>
 <dt>说明应该包含哪些内容</dt>
@@ -820,9 +867,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -858,10 +919,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -871,8 +931,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -887,6 +956,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -928,12 +1229,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./05.html" class="pagination-link">
+      <a href="./05.html" class="pagination-link  aria-label=" &lt;span="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">人际关系网络</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./07.html" class="pagination-link">
+      <a href="./07.html" class="pagination-link" aria-label="<span class='chapter-number'>7</span>&nbsp; <span class='chapter-title'>论文类型</span>">
         <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">论文类型</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -942,4 +1243,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psychelzh/phdrule/issues/new" class="toc-action"><i class="bi bi-github"></i>报告问题</a></li></ul></div></div></div></footer></body></html>

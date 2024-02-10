@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "没有结果",
     "search-matching-documents-text": "匹配的文档",
@@ -56,11 +62,18 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "更多匹配结果",
     "search-more-matches-text": "更多匹配结果",
     "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "取消",
-    "search-submit-button-title": "提交"
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
   }
 }</script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
@@ -69,11 +82,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">学术体制</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">学术体制</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -81,123 +99,143 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">给研究生的学术建议</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/psychelzh/phdrule" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/psychelzh/phdrule" title="源代码" class="quarto-navigation-tool px-1" aria-label="源代码"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="搜索"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">前言</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">前言</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">你想攻读博士学位吗？</span></a>
+  <a href="./01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">你想攻读博士学位吗？</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">攻读博士学位的程序</span></a>
+  <a href="./02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">攻读博士学位的程序</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">学术体制</span></a>
+  <a href="./03.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">学术体制</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">导师</span></a>
+  <a href="./04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">导师</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">人际关系网络</span></a>
+  <a href="./05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">人际关系网络</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">阅读</span></a>
+  <a href="./06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">阅读</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">论文类型</span></a>
+  <a href="./07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">论文类型</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">写作</span></a>
+  <a href="./08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">写作</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./09.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">写作结构</span></a>
+  <a href="./09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">写作结构</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">写作风格</span></a>
+  <a href="./10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">写作风格</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">写作过程</span></a>
+  <a href="./11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">写作过程</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">陈述报告</span></a>
+  <a href="./12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">陈述报告</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./13.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">研究设计</span></a>
+  <a href="./13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">研究设计</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./14.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">答辩</span></a>
+  <a href="./14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">答辩</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./15.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">学术会议</span></a>
+  <a href="./15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">学术会议</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./16.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">答辩后</span></a>
+  <a href="./16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">答辩后</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">附录</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">附录</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rules.html" class="sidebar-item-text sidebar-link">有用的原则和建议</a>
+  <a href="./rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">有用的原则和建议</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./glossary.html" class="sidebar-item-text sidebar-link">一些有用的术语</a>
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">一些有用的术语</span></a>
   </div>
 </li>
       </ul>
@@ -205,38 +243,39 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#头衔和岗位" id="toc-头衔和岗位" class="nav-link active" data-scroll-target="#头衔和岗位"><span class="toc-section-number">3.1</span>  头衔和岗位</a>
+  <li><a href="#头衔和岗位" id="toc-头衔和岗位" class="nav-link active" data-scroll-target="#头衔和岗位"><span class="header-section-number">3.1</span> 头衔和岗位</a>
   <ul class="collapse">
-  <li><a href="#研究助理-research-assistant" id="toc-研究助理-research-assistant" class="nav-link" data-scroll-target="#研究助理-research-assistant"><span class="toc-section-number">3.1.1</span>  研究助理 （Research assistant）</a></li>
-  <li><a href="#博士后研究助理postdoctoral-research-assistant" id="toc-博士后研究助理postdoctoral-research-assistant" class="nav-link" data-scroll-target="#博士后研究助理postdoctoral-research-assistant"><span class="toc-section-number">3.1.2</span>  博士后研究助理（Postdoctoral research assistant）</a></li>
-  <li><a href="#讲师lecturer" id="toc-讲师lecturer" class="nav-link" data-scroll-target="#讲师lecturer"><span class="toc-section-number">3.1.3</span>  讲师（Lecturer）</a></li>
-  <li><a href="#高级讲师senior-lecturer" id="toc-高级讲师senior-lecturer" class="nav-link" data-scroll-target="#高级讲师senior-lecturer"><span class="toc-section-number">3.1.4</span>  高级讲师（Senior lecturer）</a></li>
-  <li><a href="#主要讲师principal-lecturer" id="toc-主要讲师principal-lecturer" class="nav-link" data-scroll-target="#主要讲师principal-lecturer"><span class="toc-section-number">3.1.5</span>  主要讲师（Principal lecturer）</a></li>
-  <li><a href="#普通教授readerrdr_prf" id="toc-普通教授readerrdr_prf" class="nav-link" data-scroll-target="#普通教授readerrdr_prf"><span class="toc-section-number">3.1.6</span>  普通教授（Reader）</a></li>
-  <li><a href="#资深研究员-proper-research-fellow" id="toc-资深研究员-proper-research-fellow" class="nav-link" data-scroll-target="#资深研究员-proper-research-fellow"><span class="toc-section-number">3.1.7</span>  资深研究员 （Proper research fellow）</a></li>
-  <li><a href="#资深教授-professorrdr_prf2" id="toc-资深教授-professorrdr_prf2" class="nav-link" data-scroll-target="#资深教授-professorrdr_prf2"><span class="toc-section-number">3.1.8</span>  资深教授 （ Professor）</a></li>
+  <li><a href="#研究助理-research-assistant" id="toc-研究助理-research-assistant" class="nav-link" data-scroll-target="#研究助理-research-assistant"><span class="header-section-number">3.1.1</span> 研究助理 （Research assistant）</a></li>
+  <li><a href="#博士后研究助理postdoctoral-research-assistant" id="toc-博士后研究助理postdoctoral-research-assistant" class="nav-link" data-scroll-target="#博士后研究助理postdoctoral-research-assistant"><span class="header-section-number">3.1.2</span> 博士后研究助理（Postdoctoral research assistant）</a></li>
+  <li><a href="#讲师lecturer" id="toc-讲师lecturer" class="nav-link" data-scroll-target="#讲师lecturer"><span class="header-section-number">3.1.3</span> 讲师（Lecturer）</a></li>
+  <li><a href="#高级讲师senior-lecturer" id="toc-高级讲师senior-lecturer" class="nav-link" data-scroll-target="#高级讲师senior-lecturer"><span class="header-section-number">3.1.4</span> 高级讲师（Senior lecturer）</a></li>
+  <li><a href="#主要讲师principal-lecturer" id="toc-主要讲师principal-lecturer" class="nav-link" data-scroll-target="#主要讲师principal-lecturer"><span class="header-section-number">3.1.5</span> 主要讲师（Principal lecturer）</a></li>
+  <li><a href="#普通教授readerrdr_prf" id="toc-普通教授readerrdr_prf" class="nav-link" data-scroll-target="#普通教授readerrdr_prf"><span class="header-section-number">3.1.6</span> 普通教授（Reader）</a></li>
+  <li><a href="#资深研究员-proper-research-fellow" id="toc-资深研究员-proper-research-fellow" class="nav-link" data-scroll-target="#资深研究员-proper-research-fellow"><span class="header-section-number">3.1.7</span> 资深研究员 （Proper research fellow）</a></li>
+  <li><a href="#资深教授-professorrdr_prf2" id="toc-资深教授-professorrdr_prf2" class="nav-link" data-scroll-target="#资深教授-professorrdr_prf2"><span class="header-section-number">3.1.8</span> 资深教授 （ Professor）</a></li>
   </ul></li>
-  <li><a href="#了解你的敌人" id="toc-了解你的敌人" class="nav-link" data-scroll-target="#了解你的敌人"><span class="toc-section-number">3.2</span>  了解你的“敌人”</a>
+  <li><a href="#了解你的敌人" id="toc-了解你的敌人" class="nav-link" data-scroll-target="#了解你的敌人"><span class="header-section-number">3.2</span> 了解你的“敌人”</a>
   <ul class="collapse">
-  <li><a href="#人" id="toc-人" class="nav-link" data-scroll-target="#人"><span class="toc-section-number">3.2.1</span>  人</a></li>
-  <li><a href="#物" id="toc-物" class="nav-link" data-scroll-target="#物"><span class="toc-section-number">3.2.2</span>  物</a></li>
-  <li><a href="#习惯" id="toc-习惯" class="nav-link" data-scroll-target="#习惯"><span class="toc-section-number">3.2.3</span>  习惯</a></li>
+  <li><a href="#人" id="toc-人" class="nav-link" data-scroll-target="#人"><span class="header-section-number">3.2.1</span> 人</a></li>
+  <li><a href="#物" id="toc-物" class="nav-link" data-scroll-target="#物"><span class="header-section-number">3.2.2</span> 物</a></li>
+  <li><a href="#习惯" id="toc-习惯" class="nav-link" data-scroll-target="#习惯"><span class="header-section-number">3.2.3</span> 习惯</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/psychelzh/phdrule/issues/new" class="toc-action">报告问题</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/psychelzh/phdrule/issues/new" class="toc-action"><i class="bi bi-github"></i>报告问题</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">学术体制</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">学术体制</span></h1>
 </div>
 
 
@@ -249,7 +288,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>这一部分描述了学术体制的一些关键特征，其中之一是学术追求等级头衔、角色、岗位等，另一个是学术体制之中的潜在问题的形式。</p>
 <section id="头衔和岗位" class="level2" data-number="3.1">
@@ -302,14 +343,14 @@ ul.task-list li input[type="checkbox"] {
 <p>如果你现在正在读这本书，那么你就很可能不属于这类人，不可能再犯他们犯的错误。然而，你同样需要了解这些内容，因为这些内容也不是一无是处，其副产品便是为优秀研究者们提供了这些有发展前途的不错的话题。</p>
 <p>在这里，典型的例子就是任何关于因特网的研究题目。由于这是“戴棒球帽的人”的最爱，任何一位认真严谨的研究者在开始这方面研究工作时，需要从文章第一句就非常清楚地声明这篇论文不是什么滥竿充数的“戴着棒球帽的孩子”所作。下面我们举出些例子供大家参考：</p>
 <div id="exm-amt" class="theorem example">
-<p><span class="theorem-title"><strong>例子 3.1 </strong></span>一个成功的网页设计对于网络企业的成功与否至关重要。</p>
+<p><span class="theorem-title"><strong>例子 3.1</strong></span> 一个成功的网页设计对于网络企业的成功与否至关重要。</p>
 </div>
 <div id="exm-prf" class="theorem example">
-<p><span class="theorem-title"><strong>例子 3.2 </strong></span>虽然很少公之于世，但是软件设计的中心或内核就是两种需求达到的一种平衡，一方面是对标准与规矩的渴望与需求，另一方面是对避免发生抄袭剽窃与侵犯他人版权的渴望与需求。</p>
+<p><span class="theorem-title"><strong>例子 3.2</strong></span> 虽然很少公之于世，但是软件设计的中心或内核就是两种需求达到的一种平衡，一方面是对标准与规矩的渴望与需求，另一方面是对避免发生抄袭剽窃与侵犯他人版权的渴望与需求。</p>
 </div>
-<p><a href="#exm-amt">例子&nbsp;<span>3.1</span></a>可能出自一位网页设计的权威之手，也可能出自一个没有任何专业知识，只是懂得皮毛的人之手。</p>
-<p>对于<a href="#exm-prf">例子&nbsp;<span>3.2</span></a>而言，不是任何人都能够写出来的，这个人必须对论题有细致的了解，具备高深的专业知识，同时对此题目具有独创的想法。</p>
-<p>事实上<a href="#exm-amt">例子&nbsp;<span>3.1</span></a>和<a href="#exm-prf">例子&nbsp;<span>3.2</span></a>出自同一人之手。<a href="#exm-amt">例子&nbsp;<span>3.1</span></a>出现在第一稿中；<a href="#exm-prf">例子&nbsp;<span>3.2</span></a>出自第二稿，作者为了表明该论文不是出自滥竿充数的＂戴着棒球帽的人”之手，对原句作了修改，重新写了出来。</p>
+<p><a href="#exm-amt" class="quarto-xref">例子&nbsp;<span>3.1</span></a>可能出自一位网页设计的权威之手，也可能出自一个没有任何专业知识，只是懂得皮毛的人之手。</p>
+<p>对于<a href="#exm-prf" class="quarto-xref">例子&nbsp;<span>3.2</span></a>而言，不是任何人都能够写出来的，这个人必须对论题有细致的了解，具备高深的专业知识，同时对此题目具有独创的想法。</p>
+<p>事实上<a href="#exm-amt" class="quarto-xref">例子&nbsp;<span>3.1</span></a>和<a href="#exm-prf" class="quarto-xref">例子&nbsp;<span>3.2</span></a>出自同一人之手。<a href="#exm-amt" class="quarto-xref">例子&nbsp;<span>3.1</span></a>出现在第一稿中；<a href="#exm-prf" class="quarto-xref">例子&nbsp;<span>3.2</span></a>出自第二稿，作者为了表明该论文不是出自滥竿充数的＂戴着棒球帽的人”之手，对原句作了修改，重新写了出来。</p>
 <p>流行趋势来得快，去得也快。但是流行的追随者或实践者（与他们的不良习惯精神传承者），会永远留在那里，等待着那个可以预见的未来。当然，任何喜欢＂棒球帽＂的学生，可能同时又非常勤奋用功，也许有一天”棒球帽“会成为一种优秀学生的象征。</p>
 </dd>
 <dt>校外评审人</dt>
@@ -373,11 +414,11 @@ ul.task-list li input[type="checkbox"] {
 <dd>
 <p>出现这种事倍功半的情况，是有很多不同的原因的。</p>
 <div id="prp-1" class="theorem proposition">
-<p><span class="theorem-title"><strong>原因 3.1 </strong></span>虽然你花了很多时间，但是研究却毫无进展，原因在于你根本不知道自己在做什么，也不知道这样做是为了什么。</p>
+<p><span class="theorem-title"><strong>原因 3.1</strong></span> 虽然你花了很多时间，但是研究却毫无进展，原因在于你根本不知道自己在做什么，也不知道这样做是为了什么。</p>
 </div>
 <p>在这样的情况下，重新设计你的研究不失为一个好主意。这指的是；你需要修改研究课题，确保不是把所有赌注放在哪个具体的发现上面。拿自己几年的生命作赌注，是很不明智的；只有自已完全确信时才开始做研究，深信研究结果一定能够证明自己一开始时的想法，这样做是非常不可靠的：如果研究发现与你以前的想法不相符，你怎么办呢？伪造数据，还是面对现实，改变自己的想法呢？</p>
 <div id="prp-2" class="theorem proposition">
-<p><span class="theorem-title"><strong>原因 3.2 </strong></span>你忙于做些无形的准备活动。这些活动对于做好研究尤其重要；从定义上看，虽然付出努力，但是却不能够创造任何可见的成果。比方说，你忙于准备文具，或者你在做文献准备，查看有没有人已经做过类似的研究；或者你在做大量泛读，了解一些背景知识（相对于精读而言）。这些事情必须要做。文具很重要，背景知识也不可或缺。</p>
+<p><span class="theorem-title"><strong>原因 3.2</strong></span> 你忙于做些无形的准备活动。这些活动对于做好研究尤其重要；从定义上看，虽然付出努力，但是却不能够创造任何可见的成果。比方说，你忙于准备文具，或者你在做文献准备，查看有没有人已经做过类似的研究；或者你在做大量泛读，了解一些背景知识（相对于精读而言）。这些事情必须要做。文具很重要，背景知识也不可或缺。</p>
 </div>
 <p>这里大力推荐泛读，因为很多一流的作品都来自于将一部作品应用于另外一部作品。（我们中有人曾经指导过一篇本科论文，那篇文章就是用一位19世纪的研究者的形式主义来研究俄国民间故事结构，并且将其用于电脑游戏情节研究，非常优秀，也很有趣，对于电脑游戏业有很多启发。）问题是你从来都不能够事先就知道哪些东西在哪些时候在哪里有用：俄罗斯民间故事就是从20年前的主题中读到的。这样做的好处在于，当你碰到类似于这种可以 “异体受精”的有关主题，你就可以毫不费力地创造出很优秀的文章。我们建议涉及这个领域，你可以等到一切准备就绪，可以发表文章时，再将你的想法公布于众。因为问题的关键不在于实际的发现本身，而在于将一种具体的作品主体用于其他领域这个想法本身。</p>
 </dd>
@@ -427,9 +468,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -465,10 +520,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -478,8 +532,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -494,6 +557,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -535,12 +830,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02.html" class="pagination-link">
+      <a href="./02.html" class="pagination-link  aria-label=" &lt;span="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">攻读博士学位的程序</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./04.html" class="pagination-link">
+      <a href="./04.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>导师</span>">
         <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">导师</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -549,4 +844,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psychelzh/phdrule/issues/new" class="toc-action"><i class="bi bi-github"></i>报告问题</a></li></ul></div></div></div></footer></body></html>

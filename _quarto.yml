@@ -6,9 +6,9 @@ book:
   title: 给研究生的学术建议
   subtitle: The Unwritten Rules of Ph.D. Research
   author:
-  - （英）戈登·鲁格 玛丽安·彼得【著】
-  - 彭万华【译】 彭凯平【校】
-  - 张亮【编】
+    - （英）戈登·鲁格 玛丽安·彼得【著】
+    - 彭万华【译】 彭凯平【校】
+    - 张亮【编】
   date: now
   site-url: https://psychelzh.github.io/phdrule/
   repo-url: https://github.com/psychelzh/phdrule
@@ -48,3 +48,5 @@ format:
     code-link: true
     comments:
       hypothesis: true
+  epub:
+    toc: true

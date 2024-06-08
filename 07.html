@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -287,7 +287,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="数据导向型论文data-driven-papers" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="数据导向型论文data-driven-papers"><span class="header-section-number">7.1</span> 数据导向型论文（Data-driven papers）</h2>
 <p>这是大多数人最容易想到的一种论文类型。数据导向型论文集中描述和讨论数据（而不是描述和讨论收集数据所用的方法）。这类论文的代表包括报告调查结果的论文和报告正式试验的论文。</p>
-<p>数据导向型论文因为儿个原因很重要，并且使用“学徒”研究模式的研究者将在他们的研究中至少安排一项数据导向的研究，以证明他们知道如何做这些工作。</p>
+<p>数据导向型论文因为几个原因很重要，并且使用“学徒”研究模式的研究者将在他们的研究中至少安排一项数据导向的研究，以证明他们知道如何做这些工作。</p>
 <p>如果你的论文的中心是数据，那么你需要好的数据。这意味着数据可靠并且有趣。“可靠”的意思是：样本的大小、质量和代表性等应该达到一个毋庸置疑的标准。研究人员中的新手（有时候不仅仅是新手）常常会担心样本的大小是否达标，被调查对象是否足够多。他们担心的另一个问题就是样本的代表性问题。代表性是他们喜欢考虑的问题，因为任何人，只要有一把舒适的坐椅和一点常识，都能够不费劲地想出各种理由来质疑样本是否具有足够的代表性。然而一旦问卷寄出（问卷是搜集数目庞大、可信度值得怀疑的数据的惯用方法），这种种担忧都会让位给怎么方便怎么来的原则。所以如果你正在进行这方面的工作，你有必要了解统计学的知识。</p>
 <p>刚开始从事研究工作的人往往会忽视，得到有趣的数据是很重要的，这一点经验丰富的研究人员是决不会忽视的。新手们不重视这一点的原因可能是，他们在收到调查对象的问卷回答之前，往往不会去设想采集来的数据会是什么样子。由于采集来的数据没有新颖之处，他们研究结论的枯燥乏味也就可想而知，所以很快淡出公众视线之外。对于一个有经验的研究人员来说，去野外钓鱼还不如钓养在桶里的鱼（也就是说，数据能够吸引人的儿率必须足够大，才值得进行大规模的数据采集）。</p>
 <p>能够吸引人的研究结果往往是让人吃惊的，同时又是有用的。这个结果应该有一个基础坚实的样本作为依据，样本数据必须足够可信，以至于可以将其作为未来进一步研究的基础。</p>
@@ -424,6 +424,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/psychelzh\.github\.io\/phdrule\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -458,7 +476,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -734,12 +756,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./06.html" class="pagination-link  aria-label=" &lt;span="">
+      <a href="./06.html" class="pagination-link" aria-label="阅读">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">阅读</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./08.html" class="pagination-link" aria-label="<span class='chapter-number'>8</span>&nbsp; <span class='chapter-title'>写作</span>">
+      <a href="./08.html" class="pagination-link" aria-label="写作">
         <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">写作</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

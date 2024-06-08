@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -478,7 +478,7 @@ ul.task-list li input[type="checkbox"] {
 <li>把想法写在检索卡片上（一张一个想法），然后把它们分组或按某种结构摆放。用不同的方式来分类和摆放卡片可以帮助你发现，哪些想法是不符合整体框架的，哪些想法是需要着重强调的。</li>
 <li>写作纲要：有经验的写作者往往会建议，列出一个具体的写作纲要应该是第一件必须做的事。列出不同种类的纲要会对你有帮助，这些纲要包括：内容大纲、标题加上相应部分的概要（以体现出论文的是“故事情节”）、标题加上对相应部分“角色”的描述（这部分是什么，它有什么作用，它如何为整个论证服务）等。</li>
 </ul>
-<p>问题：为什么我用了很多笔墨去说明的问题我的导师只要简单儿句话就说清楚了？</p>
+<p>问题：为什么我用了很多笔墨去说明的问题我的导师只要简单几句话就说清楚了？</p>
 <p>解决这个问题就必须练习，练习写作和修改。记住简单原则。但也要认识到，简单并不是单纯的字数少一有时候多加几个词反而会使文章更加简单易懂。应该从论证结构上找问题的根源，并将结构作为你修改的重中之重。文章的混乱与不和谐往往是由于你不知道该保留哪些合适的东西，删除哪些不合适的东西，结果就是所有该使用的内容和不该使用的内容都被堆到了一起。</p>
 <p>在你把稿子交给导师审阅之前，先过自己的修改“关”，找出所有重复多余的地方。在导师对你的论文进行了删改之后，分析导师的改动：哪些内容是可以省略的？为什么？你之前认为这些内容的作用是什么？</p>
 <p>问题：如何培养学术写作的风格？</p>
@@ -580,6 +580,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/psychelzh\.github\.io\/phdrule\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -614,7 +632,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -890,12 +912,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./10.html" class="pagination-link  aria-label=" &lt;span="">
+      <a href="./10.html" class="pagination-link" aria-label="写作风格">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">写作风格</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./12.html" class="pagination-link" aria-label="<span class='chapter-number'>12</span>&nbsp; <span class='chapter-title'>陈述报告</span>">
+      <a href="./12.html" class="pagination-link" aria-label="陈述报告">
         <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">陈述报告</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

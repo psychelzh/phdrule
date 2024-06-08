@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -332,7 +332,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="文献综述" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="文献综述"><span class="header-section-number">6.3</span> 文献综述</h2>
 <p>学术文章或论文一般都是以文献综述开始的口有很多原因可以解释这种安排。</p>
-<p>一个显而易见的原因是为论文将要涉及的研究工作进行铺垫（比如告诉读者前人已经做了哪些工作）。引用前人的研究要采用标准的引用格式，以方便感兴趣的和持怀疑意见的读者查找原文出处，与文献综述的内容作对照。第二个原因也同样重要，那就是通过文献综述证明你巳经系统地做了相关研究，让读者相信读你的论文不会是浪费时间。</p>
+<p>一个显而易见的原因是为论文将要涉及的研究工作进行铺垫（比如告诉读者前人已经做了哪些工作）。引用前人的研究要采用标准的引用格式，以方便感兴趣的和持怀疑意见的读者查找原文出处，与文献综述的内容作对照。第二个原因也同样重要，那就是通过文献综述证明你已经系统地做了相关研究，让读者相信读你的论文不会是浪费时间。</p>
 <p>文献综述应该有一个清晰的结构以方便读者阅读，因为即使是再好的学术性文章也会比较艰深难懂。清晰的结构也可以显示出你了解自己在做什么，以及为什么要这么做。让读者读懂你的文章是你的责任，而不是读者的责任。如果你从网上找来一些参考资料不加区分地堆在一起，那么读者没有责任帮你从一篇混乱的文章中理出思路。</p>
 <p>文献综述最常用的，也是我们赞同的一种结构，是从某领域的最早研究开始以时间顺序讨论所有迄今为止的重要研究。按照这种结构，你的引用就应该从该领域最早的文献开始，接着介绍一些各个时期最重要的文献，最后写当下的童要文献。之后，你的参考文献则一般从旧的研讨会参考文献开始，接若是近期的关键参考文献和次重要的参考文献，最后是最新的重要参考文献。</p>
 <p>有一个问题常常会引起混淆，那就是文献综述与引言之间的关系。这方面不同学校和个人有不同的做法。有的喜欢把文献综述和引言作为单独的两部分，有的则喜欢把两者合在一起写。我们的建议是要弄清楚，你所在的学校在这方面有没有相关规定，如果有，就按照规定写，如果没有，就按照你自己的喜好写。没有必要纠缠于这个问题上。</p>
@@ -603,7 +603,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="结论" class="level3" data-number="6.6.10">
 <h3 data-number="6.6.10" class="anchored" data-anchor-id="结论"><span class="header-section-number">6.6.10</span> 结论</h3>
 <p>结论通常还包括关于不“将来研究”的部分。结论应该对引言中提出的问题给出一系列清楚明确的回答。这些回答应该由结果部分（如果是实验科学学科的论文）的数据以及讨论部分（每一类论文都必须有）的内容作为依据。</p>
-<p>学者们常常利用将来研究的部分为自己在未来的研究领域抢得一块地盘。有经验的研究人员往往会在这个部分简要描述自己未来的研究计划和课题，有经验的读者能清楚认识到，到论文发表时，它的作者可能巳经花了一年的时间在新课题的研究上了，所以自己也就没有必要草率地往那个研究方向上努力了。</p>
+<p>学者们常常利用将来研究的部分为自己在未来的研究领域抢得一块地盘。有经验的研究人员往往会在这个部分简要描述自己未来的研究计划和课题，有经验的读者能清楚认识到，到论文发表时，它的作者可能已经花了一年的时间在新课题的研究上了，所以自己也就没有必要草率地往那个研究方向上努力了。</p>
 </section>
 <section id="批判性反思部分" class="level3" data-number="6.6.11">
 <h3 data-number="6.6.11" class="anchored" data-anchor-id="批判性反思部分"><span class="header-section-number">6.6.11</span> 批判性反思部分</h3>
@@ -732,7 +732,7 @@ ul.task-list li input[type="checkbox"] {
 表格&nbsp;6.1: 学生利用文献的发展过程
 </figcaption>
 <div aria-describedby="tbl-lit-usage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 17%">
@@ -919,6 +919,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/psychelzh\.github\.io\/phdrule\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -953,7 +971,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1229,12 +1251,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./05.html" class="pagination-link  aria-label=" &lt;span="">
+      <a href="./05.html" class="pagination-link" aria-label="人际关系网络">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">人际关系网络</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./07.html" class="pagination-link" aria-label="<span class='chapter-number'>7</span>&nbsp; <span class='chapter-title'>论文类型</span>">
+      <a href="./07.html" class="pagination-link" aria-label="论文类型">
         <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">论文类型</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

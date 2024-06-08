@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -286,13 +286,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>研究者们主要通过三种方式来获取他们研究领域内的最新进展。口头传递是一种迅速且有效的方式——如果史密斯和琼斯巳经解决了他们领域中最重要的问题，他们领域内的主要研究者们会在消息公布于众前的儿小时通过电话交谈和电子邮件传递这件事情。如果你是这个传递网络主要的参与者，这是非常好的事情，但是如果你只是一个正在努力奋斗的博士生，那么这种方式就不是那么好了。</p>
+<p>研究者们主要通过三种方式来获取他们研究领域内的最新进展。口头传递是一种迅速且有效的方式——如果史密斯和琼斯已经解决了他们领域中最重要的问题，他们领域内的主要研究者们会在消息公布于众前的儿小时通过电话交谈和电子邮件传递这件事情。如果你是这个传递网络主要的参与者，这是非常好的事情，但是如果你只是一个正在努力奋斗的博士生，那么这种方式就不是那么好了。</p>
 <p>对于大多数博士生而言，跟上潮流的一个更为可行的方式就是阅读期刊。不幸的是，期刊文章要在研究结束后两年左右才能刊出，因此，你的图书馆里新上架的期刊的文章大概都是三年前完成的研究内容。在学术会议上获得最新的研究进展则相对容易得多。每年，大多数研究领域都会开一些年会，来自世界各地的研究者们会聚在一起，展示他们的工作并且聆听别人阐述工作。更重要的，他们也开展社交并建立他们的社交网络，通常的方式包括去酒吧喝酒。因此，学术会议给你一个机会发现不超过一年甚至更近一段时间的研究，并且也给你机会结识世界各地的同领域研究者。</p>
 <p>基本情况就是这些，但学术会议怎样才能把你需要知道的传达给你呢？我们会从这个部分开始，从一个完全新手的角度来解释，然后再转到那些组织者的角度来解释，最后给出一些建议，让你知道该怎样运用这些知识帮助你参加大多数学术会议。</p>
 <section id="学术会议过程新手的视角" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="学术会议过程新手的视角"><span class="header-section-number">15.1</span> 学术会议过程：新手的视角</h2>
 <p>你能够参加的学术会议有两种内容。一种是介绍自己的工作，而另一种是不介绍自己的工作。我们接下来讨论的情况是你介绍自己的工作，当然这已经包括作为一名听众你需要做什么。</p>
-<p>在一个学术会议上展示自己的研究进展有儿个主要途径。其中之一是你想公开发表一些东西，但概念没有完全成形，学术会议就是一个好地方。另一种情况：一开始就是为了免费游览会议所在地点而去的，这需要你把研究精力集中在你所向往的会议地点举办的会议的会议主题上。第三种情况：期待让一篇论文被一个特殊的会议选中，因为这是这个领域内的主要会议。巧合的是，会议通常在夏威夷之类的地方召开，并且他们对可以接纳的论文的标准又相对较低。</p>
+<p>在一个学术会议上展示自己的研究进展有几个主要途径。其中之一是你想公开发表一些东西，但概念没有完全成形，学术会议就是一个好地方。另一种情况：一开始就是为了免费游览会议所在地点而去的，这需要你把研究精力集中在你所向往的会议地点举办的会议的会议主题上。第三种情况：期待让一篇论文被一个特殊的会议选中，因为这是这个领域内的主要会议。巧合的是，会议通常在夏威夷之类的地方召开，并且他们对可以接纳的论文的标准又相对较低。</p>
 <p>不管过程怎样，最后都需要适合那个会议的论文。征文通知将说明哪种类型的论文会被接受，会给每一种论文的类型提供指导原则，也会告知截止日期。征文主要类型通常包括一些或者以下的全部。</p>
 <ul>
 <li>长论文（full papers）；</li>
@@ -482,6 +482,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/psychelzh\.github\.io\/phdrule\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -516,7 +534,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -792,12 +814,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./14.html" class="pagination-link  aria-label=" &lt;span="">
+      <a href="./14.html" class="pagination-link" aria-label="答辩">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">答辩</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./16.html" class="pagination-link" aria-label="<span class='chapter-number'>16</span>&nbsp; <span class='chapter-title'>答辩后</span>">
+      <a href="./16.html" class="pagination-link" aria-label="答辩后">
         <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">答辩后</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

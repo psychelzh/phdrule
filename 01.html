@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -392,7 +392,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="学术写作" class="level3" data-number="1.6.4">
 <h3 data-number="1.6.4" class="anchored" data-anchor-id="学术写作"><span class="header-section-number">1.6.4</span> 学术写作</h3>
 <p>写作的确是一项可迁移性技能，你可以把学术写作的技巧从一个学术环境迁移到另一个学术环境，当然你也可以把商务写作的技巧从一个商业领域迁移到另外一个商业领域。甚至非常可能有这样的领域，在这些领域你可以把学术写作的技巧迁移到工业管理上，反之亦然。</p>
-<table class="table">
+<table class="caption-top table">
 <caption>给研究生的建议</caption>
 <colgroup>
 <col style="width: 39%">
@@ -540,6 +540,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/psychelzh\.github\.io\/phdrule\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -574,7 +592,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -850,12 +872,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link  aria-label=" 前言"="">
+      <a href="./index.html" class="pagination-link" aria-label="前言">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">前言</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>攻读博士学位的程序</span>">
+      <a href="./02.html" class="pagination-link" aria-label="攻读博士学位的程序">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">攻读博士学位的程序</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
